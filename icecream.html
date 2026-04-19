@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM API for HTML modification</title>
+</head>
+
+<body style="background-color:lightblue;text-align:center">
+    <h1 id="hdr1">Here's your ice cream</h1>
+    <img id="img1"
+        src="strawberry-and-chocolate-ice-cream-cone-with-spilling-ice-cream-illustration-isolated-on-vertical-white-and-blue-background-simple-flat-outlined-cartoon-food-drawing-free-vector.jpg"
+        alt="Ice cream is not ready">
+    <p id="p1" onclick="eat()">Click here to eat</p>
+    <script>
+        let eaten = false;
+        function eat() {
+            if (!eaten) {
+                document.getElementById("img1").src = "empty-ice-cream-cone-clipart-image-shows-empty-ice-cream-cone-waffle-pattern-simple-textured-design-370727461.webp";
+
+                document.getElementById("hdr1").innerHTML = "Hope you Liked it";
+                document.body.style.backgroundColor = "pink";
+                document.getElementById("p1").innerHTML = "Click here to refil it";
+                eaten = true;
+            }
+            else {
+                document.getElementById("img1").src = "strawberry-and-chocolate-ice-cream-cone-with-spilling-ice-cream-illustration-isolated-on-vertical-white-and-blue-background-simple-flat-outlined-cartoon-food-drawing-free-vector.jpg"
+
+                document.getElementById("hdr1").innerHTML = "enjoy again";
+                document.body.style.backgroundColor = "skyblue";
+                document.getElementById("p1").innerHTML = "Click here to eat it";
+                eaten = false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
